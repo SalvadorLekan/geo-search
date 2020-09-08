@@ -1,0 +1,27 @@
+:root{
+    --primary: rgb(255, 255, 255);
+    --secondary: blue;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    transition: background 1s ease-in-out;
+    min-height: 95vh;
+    background: var(--primary) url(./../assets/day.jpg) center/cover;;
+    color: var(--primary);
+}
+#form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+#form>*{
+    display: block;
+    font-size: clamp(12px, 3.5vmax, 30px);
+    height: clamp(17px, 5vmax, 45px);
+    border-radius: 5px;
+    outline: none;
+}

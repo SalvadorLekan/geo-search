@@ -10,18 +10,18 @@
 <body>
     <h1 style="padding: 12px;">Geo-Search</h1>
     <form action="" id="form">
-        <input type="search" placeholder="Address: E.G. Space Needle">
-        <input type="search" placeholder="Location: E.G. Seattle WA">
+        <input id="address" type="search" placeholder="Address: E.G. Space Needle">
+        <input id="location" type="search" placeholder="Location: E.G. Seattle WA">
         <button type="submit">Search</button>
     </form>
         <div id="weather">
-            <h2>Seattle, US</h2>
-            <img src="https://openweathermap.org/img/wn/09d@2x.png" width="99" alt="cloud">
+            <h2 id='city-header'>Seattle, US</h2>
+            <img id="weather-image" src="https://openweathermap.org/img/wn/09d@2x.png" width="99" alt="cloud">
             <div id="data">
-                <p>222 F</p>
-                <p>1014pa</p>
-                <p>23 <span>m<sup>3</sup></span></p>
-                <p>Snow</p>
+                <p><span id="temp-data">222</span> °F</p>
+                <p id="pressure-data">1014Pa</p>
+                <p id="humidity">23l</p>
+                <p id="sky-data">Snow</p>
             </div>
         </div>
         <div id="map">

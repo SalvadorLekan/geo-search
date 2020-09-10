@@ -8,12 +8,26 @@
     <title>Geo search</title>
 </head>
 <body>
-    <h1 class="header">Geo-search</h1>
+    <h1 style="padding: 12px;">Geo-Search</h1>
     <form action="" id="form">
-        <input type="search">
-        <input type="search">
+        <input type="search" placeholder="Address: E.G. Space Needle">
+        <input type="search" placeholder="Location: E.G. Seattle WA">
         <button type="submit">Search</button>
     </form>
-
+        <div id="weather">
+            <h2>Seattle, US</h2>
+            <img src="https://openweathermap.org/img/wn/09d@2x.png" width="99" alt="cloud">
+            <div id="data">
+                <p>222 F</p>
+                <p>1014pa</p>
+                <p>23 <span>m<sup>3</sup></span></p>
+                <p>Snow</p>
+            </div>
+        </div>
+        <div id="map">
+            <iframe id="iframe" frameborder="0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBby-Z83HvfSVAaAGGRwrV5O9AM83QBUcI
+              &q=Space+Needle,Seattle+WA" allowfullscreen></iframe>
+        </div>
 </body>
 </html>

@@ -1,27 +1,78 @@
 :root{
-    --primary: rgb(255, 255, 255);
-    --secondary: blue;
+    --midnight-blue: #021d40;
+    --white: #ebfcdc;
 }
+
+
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: background 1s ease-in-out;
-    min-height: 95vh;
-    background: var(--primary) url(./../assets/day.jpg) center/cover;;
-    color: var(--primary);
+    min-height: 99vh;
+    background: var(--white) url(./../assets/day.jpg) no-repeat fixed center/cover;
+    color: var(--midnight-blue);
 }
+
+#iframe{
+    border: 0;
+    margin: auto;
+    display: block;
+    width: clamp(350px,70vmin,875px);
+    height: clamp(262.5px ,52.5vmin,656.25px);
+}
+
+#data{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#data>p{
+    font-size: 1.5em;
+    padding: 10px 0;
+    font-weight: bolder;
+}
+
+#weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #form{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex: 1 1 auto;
+    height: auto;
 }
+
+
+button{
+    background: var(--midnight-blue);
+    color: var(--white);
+}
+button:hover{
+    background: rebeccapurple;
+}
+
 #form>*{
+    margin: 10px 5px;
     display: block;
-    font-size: clamp(12px, 3.5vmax, 30px);
+    font-size: clamp(12px, 3.5vmax, 20px);
     height: clamp(17px, 5vmax, 45px);
-    border-radius: 5px;
+    border-radius: 10px;
     outline: none;
+}
+
+#form>input:focus{
+    box-shadow: 0px 0px 50px rebeccapurple;
 }

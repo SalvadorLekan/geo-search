@@ -10,9 +10,6 @@
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     transition: background 1s ease-in-out;
     min-height: 99vh;
     background: var(--white) url(./../assets/day.jpg) no-repeat fixed center/cover;

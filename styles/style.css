@@ -38,6 +38,10 @@ body{
     font-weight: bolder;
 }
 
+select{
+    font-size: 1em;
+}
+
 #weather{
     display: flex;
     flex-direction: column;

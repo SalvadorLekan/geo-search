@@ -56,6 +56,9 @@ select{
     height: auto;
 }
 
+#map,#form{
+    margin: 20px auto;
+}
 
 button{
     background: var(--midnight-blue);

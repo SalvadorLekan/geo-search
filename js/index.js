@@ -20,7 +20,7 @@ form.addEventListener('submit',e=>{
     if(address.value&&locatio.value){
         const fullAddress=`${address.value.trim()},${locatio.value.trim()}`.replace(/ +/g,'+');
         const state=locatio.value.trim().replace(/ +[, ]+|[, ]+/g,' ').split(' ')[0]
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${state}&appid=628904fcbcc368d6b240913148864136`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${state}&appid=628904fcbcc368d6b240913148864136`)
         .then(data=>data.json())
         .then(data=>{
             cityHeader.innerText=`${data.name}, ${data.sys.country}`

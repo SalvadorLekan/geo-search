@@ -1,0 +1,29 @@
+#form{
+    margin: 7px auto;
+    width: 100%;
+}
+#form>*{
+    display: block;
+    height: 40px;
+    font-size: 20px;
+    outline: none;
+    margin: 3px;
+}
+#form>button{
+    min-width: 30px;
+    background: var(--bg-dark-secondary);
+    color: var(--text-dark-secondary);
+}
+#temp-data{
+    font-size: 90px;
+}
+
+@media only screen and (max-width: 600px) {
+    #form>input{
+        width: 90%;
+    }
+}
+#iframe{
+    width: 85vmin;
+    height: 85vmin;
+}

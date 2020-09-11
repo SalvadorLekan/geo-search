@@ -1,9 +1,3 @@
-const currentDate = new Date().getHours()
-if(currentDate>18||currentDate<6){
-    document.body.style.background='var(--white) url(./../assets/night.jpg) no-repeat fixed center/cover';
-    document.body.style.color= 'var(--white)';
-}
-
 const form=document.getElementById('form');
 const address=document.getElementById('address');
 const locatio=document.getElementById('location');
@@ -14,7 +8,6 @@ const pressureHeader=document.getElementById('pressure-data');
 const weatherImage=document.getElementById('weather-image');
 const humidity=document.getElementById('humidity');
 const iframe=document.getElementById('iframe');
-const temp =document.getElementById('temp');
 const share =document.getElementById('share');
 
 form.addEventListener('submit',e=>{
@@ -27,7 +20,6 @@ form.addEventListener('submit',e=>{
         .then(data=>data.json())
         .then(data=>{
             cityHeader.innerText=`${data.name}, ${data.sys.country}`
-            temp.value='°C'
             tempHeader.innerText=`${parseInt(data.main.temp-273.15)}`
             skyHeader.innerText= data.weather[0].description;
             weatherImage.setAttribute('src',`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
@@ -44,20 +36,7 @@ form.addEventListener('submit',e=>{
 
 
 
-temp.addEventListener('change',()=>{
-    switch (temp.value) {
-        case '°C':
-            tempHeader.innerText= parseInt((Number(tempHeader.innerText)-32)*5/9   ) 
-            break;
-        case '°F':
-            tempHeader.innerText= parseInt((Number(tempHeader.innerText)*9/5)+32)
-            break;
-    
-        default:
-            break;
-    }
-})
-
+console.log(parseInt('30°'))
 
 //
 

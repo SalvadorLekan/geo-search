@@ -8,6 +8,8 @@
     font-size: 20px;
     outline: none;
     margin: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 #form>button{
     min-width: 30px;
@@ -30,8 +32,19 @@
 #result{
     padding: 10px;
 }
-#city-header,#dot-menu,h1{
-    margin: 5px;
+#city-header,#change-temp-calc,#dot-menu,h1{
+    padding: 6px;
+}
+
+#change-temp-calc{
+    transition: all .5s ease-in-out;
+    right: 15px;
+    z-index: -1;
+    cursor: pointer;
+}
+
+#dot-menu{
+    cursor: pointer;
 }
 #sky-data{
     text-transform: capitalize;

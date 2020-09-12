@@ -18,6 +18,7 @@ menu.onclick=()=>{
 };
 
 changeTemp.onclick=()=>{
+    changeTemp.style.zIndex=-1
    tempHeader.innerText= 
    temperature==='Celsius'?
     Math.round((parseInt(tempHeader.innerText)*9/5)+32)+'°'
@@ -27,7 +28,6 @@ changeTemp.onclick=()=>{
     'Change to Celcius.':
     'Change to Fahrenheit.'
     temperature=temperature==='Celsius'?'Fahrenheit':'Celsius'
-    changeTemp.style.zIndex=-1
 }
 
 form.addEventListener('submit',e=>{
@@ -39,8 +39,10 @@ form.addEventListener('submit',e=>{
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${state}&appid=628904fcbcc368d6b240913148864136`)
         .then(data=>data.json())
         .then(data=>{
+            const temppp= parseInt(data.main.temp-273.15);
+            const tempp= temperature==='Celsius'?temppp:Math.round((temppp*9/5)+32);
             cityHeader.innerText=`${data.name}, ${data.sys.country}`
-            tempHeader.innerText=`${parseInt(data.main.temp-273.15)}°`
+            tempHeader.innerText=`${tempp}°`
             skyHeader.innerText= data.weather[0].description;
             weatherImage.setAttribute('src',`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
             humidity.innerHTML=data.main.humidity;

@@ -26,27 +26,29 @@
     }
 }
 #iframe{
-    width: 85vmin;
-    height: 85vmin;
+    width: 50vmin;
+    height: 70vmin;
 }
 #result{
     padding: 10px;
 }
-#city-header,#change-temp-calc,#dot-menu,h1{
+#city-header,#change-temp-calc,h1{
     padding: 6px;
 }
 h1{
     margin: 0;
 }
 #change-temp-calc{
-    transition: all .5s ease-in-out;
-    right: 15px;
+    right: 5px;
     z-index: -1;
     cursor: pointer;
 }
 
 #dot-menu{
+    padding-left: 10px;
+    padding-right: 10px;
     cursor: pointer;
+    height: 100%;
 }
 #sky-data{
     text-transform: capitalize;

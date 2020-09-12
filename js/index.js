@@ -12,6 +12,19 @@ const share =document.getElementById('share');
 let temperature='Celsius'
 const menu = document.getElementById('dot-menu')
 const changeTemp = document.getElementById("change-temp-calc")
+const lightThemes =document.querySelectorAll('.light')
+const lighterThemes =document.querySelectorAll('.light-secondary')
+const currentHour = new Date().getHours()
+console.log(currentHour)
+if(currentHour>18||currentHour<7){
+    lightThemes.forEach(theme=>{
+        theme.classList.replace('light','dark')
+    })
+    lighterThemes.forEach(theme=>{
+        theme.classList.replace('light-secondary','dark-secondary')
+    })
+}
+
 
 menu.onclick=()=>{
     changeTemp.style.zIndex=1

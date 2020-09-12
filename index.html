@@ -8,43 +8,43 @@
     <script src="./js/index.js" defer></script>
     <title>Geo search</title>
 </head>
-<body>
+<body class="light">
     <h1>Geo-Search</h1>
     <form action="" id="form" class="flex justify-content-center wrap">
         <input id="address" type="search" placeholder="Address: E.G. Space Needle">
         <input id="location" type="search" placeholder="Location: E.G. Seattle WA">
-        <button type="submit">Search</button>
+        <button type="submit">Search </button>
     </form>
-        <div id="result" class="flex wrap flex-auto">
+        <div id="result" class="flex wrap flex-auto text-center light-secondary align-items-center">
             <div id="weather">
                 <div id="header-menu" class="flex justify-content-between relative align-items-center">
                     <h2 id='city-header'>Seattle, US</h2>
-                    <span>&vellip;</span>
+                    <h2 id='dot-menu'>&vellip;</h2>
                     <div id="change-temp-calc" class="absolute"><!--Change to Fahrenheit.--></div>
                 </div>
-                <div id="data" class="grid col-2">
+                <div id="data" class="grid col-2 align-items-center">
                     <div>
-                        <img id="weather-image" src="https://openweathermap.org/img/wn/09d@2x.png" width="99" alt="cloud">
+                        <img id="weather-image" src="https://openweathermap.org/img/wn/09d@2x.png" alt="cloud">
                         <p id="sky-data">Snow</p>
                     </div>
-                    <p><span id="temp-data">32</span></p>
+                    <p><span id="temp-data">32°</span></p>
                     <div>
-                        <h3>ATM. Pressure:</h3>
+                        <h4>ATM. Pressure:</h4>
                         <p id="pressure-data">1014Pa</p>
                     </div>
                     <div>
-                        <h3>Humidity:</h3>
-                        <p id="humidity">23l</p>
-                    </div>
-                    <div>
-                        <span>Share map to Facebook:</span>
-                        <iframe id="share" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3DCity%2BHall%252C%2BNew%2BYork%252C%2BNY&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        <h4>Humidity:</h4>
+                        <p><span id="humidity">23</span><span>m<sup>3</sup></span></p>
                     </div>
                 </div>
             </div>
             <div id="map" class="flex flex-auto">
                 <iframe id="iframe" frameborder="0"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBby-Z83HvfSVAaAGGRwrV5O9AM83QBUcI&q=Space+Needle,Seattle+WA" allowfullscreen></iframe>
+            </div>
+            <div class="flex w-100 justify-content-between align-items-center" style="margin-top: 10px;">
+                <span>Share map to Facebook:</span>
+                <iframe id="share" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3DCity%2BHall%252C%2BNew%2BYork%252C%2BNY&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
 </body>

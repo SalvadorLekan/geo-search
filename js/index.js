@@ -20,10 +20,10 @@ form.addEventListener('submit',e=>{
         .then(data=>data.json())
         .then(data=>{
             cityHeader.innerText=`${data.name}, ${data.sys.country}`
-            tempHeader.innerText=`${parseInt(data.main.temp-273.15)}`
+            tempHeader.innerText=`${parseInt(data.main.temp-273.15)}°`
             skyHeader.innerText= data.weather[0].description;
             weatherImage.setAttribute('src',`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
-            humidity.innerHTML=`${data.main.humidity} <span>m<sup>3</sup></span>`;
+            humidity.innerHTML=data.main.humidity;
             pressureHeader.innerText=`${data.main.pressure} Pa`
             locatio.value=''
             address.value=''

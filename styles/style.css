@@ -11,6 +11,8 @@
 }
 *,*::before,*::after{
     box-sizing: border-box;
+    border: none;
+    border-radius: 9px;
 }
 body{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;

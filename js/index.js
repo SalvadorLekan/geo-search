@@ -9,6 +9,26 @@ const weatherImage=document.getElementById('weather-image');
 const humidity=document.getElementById('humidity');
 const iframe=document.getElementById('iframe');
 const share =document.getElementById('share');
+let temperature='Celsius'
+const menu = document.getElementById('dot-menu')
+const changeTemp = document.getElementById("change-temp-calc")
+
+menu.onclick=()=>{
+    changeTemp.style.zIndex=1
+};
+
+changeTemp.onclick=()=>{
+   tempHeader.innerText= 
+   temperature==='Celsius'?
+    Math.round((parseInt(tempHeader.innerText)*9/5)+32)+'°'
+    :
+    Math.round((parseInt(tempHeader.innerText)-32)*5/9)+'°';
+    changeTemp.innerText=temperature==='Celsius'?
+    'Change to Celcius.':
+    'Change to Fahrenheit.'
+    temperature=temperature==='Celsius'?'Fahrenheit':'Celsius'
+    changeTemp.style.zIndex=-1
+}
 
 form.addEventListener('submit',e=>{
     e.preventDefault();
@@ -28,16 +48,7 @@ form.addEventListener('submit',e=>{
             locatio.value=''
             address.value=''
         })
-        console.log(facebookShare)
         iframe.setAttribute('src',`https://www.google.com/maps/embed/v1/place?key=AIzaSyBby-Z83HvfSVAaAGGRwrV5O9AM83QBUcI&q=${fullAddress}`)
         share.setAttribute('src',`https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3D${facebookShare}&layout=button&size=large&width=77&height=28&appId`)
     }
 })
-
-
-
-console.log(parseInt('30°'))
-
-//
-
-// 

@@ -5,15 +5,20 @@
 #form>*{
     display: block;
     height: 40px;
-    font-size: 20px;
+    font-size: 18px;
     outline: none;
     margin: 3px;
     padding-left: 15px;
     padding-right: 15px;
 }
+#form input{
+    border: 3px solid var(--text-dark-secondary) ;
+}
+#form input:focus{
+    border: 3px solid navy ;
+}
 #form>button{
     min-width: 30px;
-    background: var(--bg-dark-secondary);
     color: var(--text-dark-secondary);
 }
 #temp-data{
@@ -23,32 +28,39 @@
 @media only screen and (max-width: 600px) {
     #form>input{
         width: 90%;
+        margin: 7px;
     }
 }
 #iframe{
-    width: 50vmin;
+    width: 49vmin;
     height: 70vmin;
 }
 #result{
     padding: 10px;
 }
-#city-header,#change-temp-calc,h1{
+#result>*{
+    margin: 10px;
+}
+#city-header,#change-temp-calc,h1,#cancel{
     padding: 6px;
 }
 h1{
-    margin: 0;
+    margin: 0 10px;
 }
-#change-temp-calc{
+#popup{
+    grid-template-columns: auto 1fr;
     right: 5px;
     z-index: -1;
     cursor: pointer;
 }
-
+#header-menu{
+    grid-template-columns: 1fr 1fr;
+}
 #dot-menu{
     padding-left: 10px;
     padding-right: 10px;
     cursor: pointer;
-    height: 100%;
+    justify-self: end;
 }
 #sky-data{
     text-transform: capitalize;

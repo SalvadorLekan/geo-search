@@ -13,14 +13,19 @@
     <form action="" id="form" class="flex justify-content-center wrap">
         <input id="address" type="search" placeholder="Address: E.G. Space Needle">
         <input id="location" type="search" placeholder="Location: E.G. Seattle WA">
-        <button type="submit">Search </button>
+        <button type="submit" class="light-secondary">Search </button>
+        <button id="use-location" type="button" class="light-secondary">Use My Location </button>
     </form>
-        <div id="result" class="flex wrap flex-auto text-center light-secondary align-items-center">
-            <div id="weather">
-                <div id="header-menu" class="flex justify-content-between relative align-items-center">
+        <div id="result" class="flex wrap flex-auto text-center">
+            <div id="weather" class="flex column justify-content-center light-secondary">
+                <div id="header-menu" class="grid justify-content-center relative align-items-center">
                     <h2 id='city-header'>Seattle, US</h2>
                     <h2 id='dot-menu'>&vellip;</h2>
-                    <div id="change-temp-calc" class="absolute light">Change to Fahrenheit.</div>
+                    <div id="popup" class="grid absolute light">
+                        <div id="change-temp-calc">Change to Fahrenheit. 
+                        </div>
+                        <div id="cancel">&#10005;</div>
+                    </div>
                 </div>
                 <div id="data" class="grid col-2 align-items-center">
                     <div>
@@ -38,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div id="map" class="flex flex-auto">
+            <div id="map" class="flex flex-auto light-secondary">
                 <iframe id="iframe" frameborder="0"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBby-Z83HvfSVAaAGGRwrV5O9AM83QBUcI&q=Space+Needle,Seattle+WA" allowfullscreen></iframe>
             </div>

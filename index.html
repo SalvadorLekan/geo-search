@@ -30,41 +30,40 @@
         <button type="submit" class="light-secondary">Search </button>
         <button id="use-location" type="button" class="light-secondary">Use My Location </button>
     </form>
-        <div id="result" class="flex wrap flex-auto text-center">
-            <div id="weather" class="flex column justify-content-center light-secondary">
-                <div id="header-menu" class="grid justify-content-center relative align-items-center">
-                    <h2 id='city-header'>Seattle, US</h2>
-                    <h2 id='dot-menu'>&vellip;</h2>
-                    <div id="popup" class="grid absolute light">
-                        <div id="change-temp-calc">Change to Fahrenheit. 
-                        </div>
-                        <div id="cancel">&#10005;</div>
+    <div id="result" class="flex wrap flex-auto text-center">
+        <div id="weather" class="flex column justify-content-center light-secondary">
+            <div id="header-menu" class="grid justify-content-center relative align-items-center">
+                <h2 id='city-header'></h2>
+                <h2 id='dot-menu'></h2>
+                <div id="popup" class="grid absolute light">
+                    <div id="change-temp-calc">
                     </div>
-                </div>
-                <div id="data" class="grid col-2 align-items-center">
-                    <div>
-                        <img id="weather-image" src="https://openweathermap.org/img/wn/09d@2x.png" alt="cloud">
-                        <p id="sky-data">Snow</p>
-                    </div>
-                    <p><span id="temp-data">32°</span></p>
-                    <div>
-                        <h4>ATM. Pressure:</h4>
-                        <p id="pressure-data">1014Pa</p>
-                    </div>
-                    <div>
-                        <h4>Humidity:</h4>
-                        <p><span id="humidity">23</span><span>m<sup>3</sup></span></p>
-                    </div>
+                    <div id="cancel">&#10005;</div>
                 </div>
             </div>
-            <div id="map" class="flex flex-auto light-secondary">
-                <iframe id="iframe" frameborder="0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBby-Z83HvfSVAaAGGRwrV5O9AM83QBUcI&q=Space+Needle,Seattle+WA" allowfullscreen></iframe>
-            </div>
-            <div class="flex w-100 justify-content-between align-items-center" style="margin-top: 10px;">
-                <span>Share map to Facebook:</span>
-                <iframe id="share" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3DCity%2BHall%252C%2BNew%2BYork%252C%2BNY&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <div id="data" class="grid col-2 align-items-center">
+                <div>
+                    <img id="weather-image" src="./assets/1.png" alt="cloud">
+                    <p id="sky-data"></p>
+                </div>
+                <p><span id="temp-data"></span></p>
+                <div>
+                    <h4></h4>
+                    <p id="pressure-data"></p>
+                </div>
+                <div>
+                    <h4></h4>
+                    <p id="humidity"></p>
+                </div>
             </div>
         </div>
+        <div id="map" class="flex flex-auto light-secondary">
+            <iframe id="iframe" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="flex w-100 justify-content-between align-items-center" style="margin-top: 10px;">
+            <span>Share map to Facebook:</span>
+            <iframe id="share" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
 </body>
 </html>

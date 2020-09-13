@@ -80,6 +80,9 @@ modeToggle.onchange=()=>{
     
             
             menu.onclick=()=>{
+                changeTemp.innerText=temperature==='Celsius'?
+                'Change to Celcius.':
+                'Change to Fahrenheit.'
                 pop.style.zIndex=1
             };
             pop.onclick=()=>{
@@ -108,11 +111,12 @@ modeToggle.onchange=()=>{
                     .then(data=>{
                         const temppp= parseInt(data.main.temp-273.15);
                         const tempp= temperature==='Celsius'?temppp:Math.round((temppp*9/5)+32);
+                        menu.innerHTML='&vellip;'
                         cityHeader.innerText=`${data.name}, ${data.sys.country}`
                         tempHeader.innerText=`${tempp}°`
                         skyHeader.innerText= data.weather[0].description;
                         weatherImage.setAttribute('src',`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
-                        humidity.innerHTML=data.main.humidity;
+                        humidity.innerHTML=data.main.humidity+'<span>m<sup>3</sup></span>';
                         pressureHeader.innerText=`${data.main.pressure} Pa`
                         locatio.value=''
                         address.value=''
@@ -135,11 +139,12 @@ modeToggle.onchange=()=>{
                         .then(function (data) {
                             const temppp= parseInt(data.main.temp-273.15);
                             const tempp= temperature==='Celsius'?temppp:Math.round((temppp*9/5)+32);
+                            menu.innerHTML='&vellip;'
                             cityHeader.innerText=`${data.name}, ${data.sys.country}`
                             tempHeader.innerText=`${tempp}°`
                             skyHeader.innerText= data.weather[0].description;
                             weatherImage.setAttribute('src',`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
-                            humidity.innerHTML=data.main.humidity;
+                            humidity.innerHTML=data.main.humidity+'<span>m<sup>3</sup></span>';
                             pressureHeader.innerText=`${data.main.pressure} Pa`
                             locatio.value=''
                             address.value=''

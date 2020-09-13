@@ -26,9 +26,13 @@
 }
 
 @media only screen and (max-width: 600px) {
+    #form{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     #form>input{
-        width: 90%;
-        margin: 7px;
+        width: 100%;
+        margin: 7px 0;
     }
 }
 #iframe{
@@ -46,6 +50,10 @@
 }
 h1{
     margin: 0 10px;
+}
+label{
+    margin-right: 15px;
+    font-size: xx-large;
 }
 #popup{
     grid-template-columns: auto 1fr;
@@ -67,4 +75,18 @@ h1{
 }
 #weather-image{
     height: 100%;
+}
+#mode-toggle{
+    opacity: 0;
+}
+#mode-toggle+label{
+    cursor: pointer;
+}
+#mode-toggle+label>#circle{
+    left: auto;
+    right: 0;
+}
+#mode-toggle:checked+label>#circle{
+    right: auto;
+    left: 0;
 }

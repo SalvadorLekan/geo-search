@@ -46,7 +46,7 @@
     margin: 10px;
 }
 #city-header,#change-temp-calc,h1,#cancel{
-    padding: 6px;
+    padding: 9px;
 }
 h1{
     margin: 0 10px;
@@ -89,4 +89,7 @@ label{
 #mode-toggle:checked+label>#circle{
     right: auto;
     left: 0;
+}
+#weather{
+    min-width: 250px;
 }
